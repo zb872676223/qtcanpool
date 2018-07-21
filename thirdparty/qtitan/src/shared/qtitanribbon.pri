@@ -12,8 +12,8 @@ INCLUDEPATH += $$QTITAN_ROOT/include
 win32 {
         win32-g++ {
                 LIBS += -L$$QTITAN_LIB_PATH
-                CONFIG(debug, debug|release):LIBS += -lqtnribbond4
-                        else:LIBS += -lqtnribbon4
+                CONFIG(debug, debug|release):LIBS += -lqtnribbond3
+                        else:LIBS += -lqtnribbon3
         }
         else {
                 CONFIG(debug, debug|release):LIBS += $$QTITAN_LIB_PATH/qtnribbond3.lib
