@@ -44,7 +44,7 @@ namespace Qtitan
         virtual ~ChartPieSeriesBase();
 
     public:
-        ChartDataPoint* add(qreal value, bool special = false, const QString& label = "", const QColor& color = QColor());
+        ChartDataPoint* add(qreal value, bool special = false, const QString& label = QString(), const QColor& color = QColor());
         int count() const;
 
         int rotation() const;

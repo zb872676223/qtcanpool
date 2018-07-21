@@ -555,7 +555,7 @@ extern char *QRcode_APIVersionString(void);
 /**
  * @deprecated
  */
-extern void QRcode_clearCache(void) __attribute__ ((deprecated));
+extern void QRcode_clearCache(void);// __attribute__ ((deprecated));
 
 #if defined(__cplusplus)
 }

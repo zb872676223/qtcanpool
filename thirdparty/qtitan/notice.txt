@@ -1,0 +1,1 @@
+you need to copy the dll to the target directory when using win32-msvc compiler or the software is released.

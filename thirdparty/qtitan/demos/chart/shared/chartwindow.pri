@@ -1,6 +1,6 @@
 
-INCLUDEPATH += $$QTITANDIR/demos/chart/shared/
+INCLUDEPATH += $$PWD
 
-SOURCES += $$QTITANDIR/demos/chart/shared/chartwindow.cpp
-HEADERS += $$QTITANDIR/demos/chart/shared/chartwindow.h
+SOURCES += $$PWD/chartwindow.cpp
+HEADERS += $$PWD/chartwindow.h
 

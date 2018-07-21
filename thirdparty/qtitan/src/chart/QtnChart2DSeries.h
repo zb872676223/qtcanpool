@@ -48,12 +48,12 @@ namespace Qtitan
         virtual ~Chart2DSeries();
 
     public:
-        ChartDataPoint* addAxisPointY(double value, const QString& axisLabel = "");
-        ChartDataPoint* addY(qreal value, const QString& label = "", const QColor& color = QColor());
-        ChartDataPoint* addY(const QVariant& value, const QString& label = "", const QColor& color = QColor());
-        ChartDataPoint* addXY(qreal xvalue, qreal yvalue, const QString& label = "", const QColor& color = QColor());
-        ChartDataPoint* addXYY1(qreal xvalue, qreal yvalue, qreal yvalue1, const QString& label = "", const QColor& color = QColor());
-        ChartDataPoint* addXY(const QVariant& xvalue, const QVariant& yvalue, const QString& label = "", const QColor& color = QColor());
+        ChartDataPoint* addAxisPointY(double value, const QString& axisLabel = QString());
+        ChartDataPoint* addY(qreal value, const QString& label = QString(), const QColor& color = QColor());
+        ChartDataPoint* addY(const QVariant& value, const QString& label = QString(), const QColor& color = QColor());
+        ChartDataPoint* addXY(qreal xvalue, qreal yvalue, const QString& label = QString(), const QColor& color = QColor());
+        ChartDataPoint* addXYY1(qreal xvalue, qreal yvalue, qreal yvalue1, const QString& label = QString(), const QColor& color = QColor());
+        ChartDataPoint* addXY(const QVariant& xvalue, const QVariant& yvalue, const QString& label = QString(), const QColor& color = QColor());
 
         int count() const;
         ChartDataPoint* at(int index) const;
