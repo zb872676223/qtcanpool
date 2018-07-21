@@ -1,6 +1,7 @@
 
 QTITAN_ROOT = $$PWD/../..
 
+include($$QTITAN_ROOT/qtitan.pri)
 include($$QTITAN_ROOT/src/shared/platform.pri)
 
 QTITAN_LIB_PATH = $$QTITANDIR/lib$$QTITAN_LIB_PREFIX
@@ -30,6 +31,19 @@ unix {
 
     CONFIG(debug, debug|release):LIBS += -lqtnchartd
         else:LIBS += -lqtnchart
+}
+
+# DLL
+isEmpty(QTITAN_DLL_FILE): {
+    win32 {
+        CONFIG(debug, debug|release):QTITAN_DLL_FILE = qtnchartd2.dll
+                else:QTITAN_DLL_FILE = qtnchart2.dll
+    }
+
+    unix {
+        CONFIG(debug, debug|release):QTITAN_DLL_FILE = qtnchartd.so
+            else:QTITAN_DLL_FILE = qtnchart.so
+    }
 }
 
 !lessThan(QT_VER_MAJ, 5) {

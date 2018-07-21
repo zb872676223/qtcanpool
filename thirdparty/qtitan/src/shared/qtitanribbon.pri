@@ -1,6 +1,7 @@
 
 QTITAN_ROOT = $$PWD/../..
 
+include($$QTITAN_ROOT/qtitan.pri)
 include($$QTITAN_ROOT/src/shared/platform.pri)
 
 QTITAN_LIB_PATH = $$QTITANDIR/lib$$QTITAN_LIB_PREFIX
@@ -27,6 +28,19 @@ unix {
 
     CONFIG(debug, debug|release):LIBS += -lqtnribbond
         else:LIBS += -lqtnribbon
+}
+
+# DLL
+isEmpty(QTITAN_DLL_FILE): {
+    win32 {
+        CONFIG(debug, debug|release):QTITAN_DLL_FILE = qtnribbond3.dll
+                else:QTITAN_DLL_FILE = qtnribbon3.dll
+    }
+
+    unix {
+        CONFIG(debug, debug|release):QTITAN_DLL_FILE = qtnribbond.so
+            else:QTITAN_DLL_FILE = qtnribbon.so
+    }
 }
 
 !lessThan(QT_VER_MAJ, 5) {

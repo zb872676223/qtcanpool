@@ -7,10 +7,16 @@ isEmpty(QTITANDIR):QTITANDIR = $$quote($$PWD/../../..)
 include($$QTITANDIR/src/shared/qtitanchart.pri)
 
 #DESTDIR = $$QTITANDIR/bin
-include($$QTITANDIR/qtitan.pri)
 DESTDIR = $$IDE_APP_PATH
 DESTDIR = $$member(DESTDIR, 0)$$QTITAN_LIB_PREFIX
 DESTDIR = "$$DESTDIR"
+
+# auto copy dll to STATIC_OUTPUT_BASE
+STATIC_BASE = $$QTITAN_LIB_PATH
+STATIC_OUTPUT_BASE = $$DESTDIR
+STATIC_INSTALL_BASE = $$INSTALL_DATA_PATH
+!isEmpty(QTITAN_DLL_FILE):STATIC_FILES = $$STATIC_BASE/$$member(QTITAN_DLL_FILE)
+include($$QTITANDIR/../../data.pri)
 
 !debug_and_release|build_pass {
     CONFIG(debug, debug|release) {
