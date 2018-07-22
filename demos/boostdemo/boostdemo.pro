@@ -29,6 +29,5 @@ DEFINES += QT_DEPRECATED_WARNINGS
 LIBS += $$boostLibraryName(libboost_system) \
         $$boostLibraryName(libboost_timer)
 
-message("$${LIBS}")
 SOURCES += main.cpp
 
