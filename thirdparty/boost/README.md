@@ -7,15 +7,15 @@
 
 ## 一、配置gcc环境
 ### 1.1 添加MinGW到环境变量
-安装Qt 5.10.0 MinGW 32bit默认已经将MinGW的环境配置到window的环境变量中了，如果您安装的版本没有，可以自行添加，我的在D:\Qt\Qt5.10.0\Tools\mingw530_32\bin
+安装Qt 5.10.0 MinGW 32bit默认已经将MinGW的环境配置到windows的环境变量中了，如果您安装的版本没有，可以自行添加，我的在D:\Qt\Qt5.10.0\Tools\mingw530_32\bin
 
 ### 1.2 验证环境配置
-打开window的cmd.exe (Win+R,输入cmd回车)，输入一下内容
+打开windows的cmd.exe (Win+R,输入cmd回车)，输入以下内容
 
 ```
 gcc -v
 ```
-如果现实了gcc的版本信息，证明MinGW环境添加成功。
+如果显示了gcc的版本信息，证明MinGW环境添加成功。
 
 ## 二、编译boost库
 ### 2.1 生成b2.exe和bjam.exe
